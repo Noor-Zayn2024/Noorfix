@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noorflix</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <div class="logo">NOORFLIX</div>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" data-filter="all" href="#">Home</a>
+        <a class="nav-link" data-filter="Movies" href="#">Movies</a>
+        <a class="nav-link" data-filter="Series" href="#">Series</a>
+        <a class="nav-link" data-filter="mylist" href="#">My List</a>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Search titles…"/>
+        <span class="search-icon">🔍</span>
+      </div>
+      <div class="avatar">N</div>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="heroContent"></div>
+  </section>
+
+  <!-- GENRE ROW TABS -->
+  <div class="genre-tabs" id="genreTabs"></div>
+
+  <!-- CONTENT ROWS -->
+  <main class="content" id="contentArea"></main>
+
+  <!-- MOVIE MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero" id="modalHero"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+
+  <!-- YOUTUBE PLAYER -->
+  <div class="video-player" id="videoPlayer">
+    <div class="player-header">
+      <button class="player-back" onclick="closePlayer()">← Back to Noorflix</button>
+      <div class="player-header-info">
+        <p class="player-title" id="playerTitle"></p>
+        <p class="player-subtitle" id="playerSubtitle"></p>
+      </div>
+      <button class="player-x" onclick="closePlayer()">✕</button>
+    </div>
+    <div class="youtube-wrap" id="youtubeFrame"></div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
